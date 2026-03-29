@@ -115,24 +115,52 @@
  margin-top: -0.5rem;
 }
 
-.success {
-  color: #0f5132;
-  background-color: #d1e7dd;
-  border: 1px solid #badbcc;
-  border-radius: 8px;
-  padding: 0.2rem;
-  margin-top: 0.6rem;
-  font-size: 0.6rem;
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-.submitError {
-  color: #842029;
-  background-color: #f8d7da;
-  border: 1px solid #f5c2c7;
+.modalContent {
+  width: min(440px, 100%);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.33);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.modalTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.modalMessage {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.modalClose {
+  background: #1f2d3c;
+  color: #ffffff;
+  border: none;
   border-radius: 8px;
-  padding: 0.2rem;
-  margin-top: 0.6rem;
-  font-size: 0.6rem;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modalClose:hover {
+  background: #16212f;
 }
 
 .button:disabled {

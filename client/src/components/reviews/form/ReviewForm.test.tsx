@@ -70,7 +70,12 @@ describe("ReviewForm", () => {
 
     fireEvent.click(screen.getByText("Submit Review"));
 
-    expect(await screen.findByText("Review submitted successfully.")).toBeInTheDocument();
+    expect(await screen.findByRole("dialog")).toBeInTheDocument();
+    expect(screen.getByText("Review submitted successfully.")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByText("Close"));
+
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
     expect(screen.getByLabelText("Name")).toHaveValue("");
     expect(screen.getByLabelText("Comment")).toHaveValue("");
   });
@@ -92,7 +97,8 @@ describe("ReviewForm", () => {
     expect(screen.getByText("Submitting...")).toBeInTheDocument();
 
     resolve();
-    await screen.findByText("Review submitted successfully.");
+    expect(await screen.findByRole("dialog")).toBeInTheDocument();
+    expect(screen.getByText("Review submitted successfully.")).toBeInTheDocument();
   });
 
   it("has accessible error container when validation fails", () => {
