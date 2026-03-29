@@ -1,0 +1,116 @@
+:root {
+  --text: #334155;
+  --text-h: #102a43;
+  --bg: #f4f6f8;
+  --bg-overlay: rgba(255, 255, 255, 0.96);
+  --card-bg: #ffffff;
+  --border: #d8e2ec;
+  --accent: #0d6efd;
+  --accent-bg: rgba(13, 110, 253, 0.12);
+  --accent-border: #0a58ca;
+  --success: #10b981;
+  --error: #ef4444;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  font: 16px/1.6 var(--sans);
+  letter-spacing: 0.01em;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #1f2937;
+    --text-h: #0f172a;
+    --bg: #f8fafc;
+    --bg-overlay: rgba(255, 255, 255, 0.95);
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --accent: #0d6efd;
+    --accent-bg: rgba(13, 110, 253, 0.12);
+    --shadow: 0 10px 25px rgba(15, 23, 42, 0.08), 0 4px 10px rgba(15, 23, 42, 0.05);
+    --shadow-hover: 0 20px 40px rgba(15, 23, 42, 0.12);
+  }
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: transparent;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+:focus,
+:focus-visible,
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+ 
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
