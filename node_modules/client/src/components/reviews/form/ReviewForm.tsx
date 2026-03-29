@@ -160,17 +160,26 @@ export const ReviewForm = ({ onSubmit }: any) => {
         </div>
       </div>
 
-      {submitMessage && (
-        <div
-          className={
-            submitStatus === "success"
-              ? styles.success
-              : styles.submitError
-          }
-          role="status"
-          aria-live="polite"
-        >
-          {submitMessage}
+      {(submitStatus === "success" || submitStatus === "error") && (
+        <div className={styles.modalOverlay} role="dialog" aria-modal="true" aria-labelledby="submit-modal-title">
+          <div className={styles.modalContent}>
+            <h2 id="submit-modal-title" className={styles.modalTitle}>
+              {submitStatus === "success" ? "Success" : "Submission issue"}
+            </h2>
+
+            <p className={styles.modalMessage}>{submitMessage}</p>
+
+            <button
+              type="button"
+              className={styles.modalClose}
+              onClick={() => {
+                setSubmitStatus("idle");
+                setSubmitMessage("");
+              }}
+            >
+              Close
+            </button>
+          </div>
         </div>
       )}
 
