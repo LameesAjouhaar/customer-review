@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1774805805790",
+    "createdAt": "2026-03-29T17:36:45.790Z",
+    "name": "Lamees Ajouhaar",
+    "rating": 4,
+    "comment": "test abcdefg"
+  },
+  {
+    "id": "1774805386540",
+    "createdAt": "2026-03-29T17:29:46.540Z",
+    "name": "Lamees Ajouhaar",
+    "rating": 4,
+    "comment": "testing my success modal"
+  },
+  {
+    "id": "1774714129424",
+    "createdAt": "2026-03-28T16:08:49.424Z",
+    "name": "John Doe",
+    "rating": 3,
+    "comment": "Good experience, it is easy to use."
+  },
+  {
+    "id": "1",
+    "name": "Lucy Brown",
+    "rating": 5,
+    "comment": "Fantastic experience, very intuitive platform.",
+    "createdAt": "2026-03-01T10:00:00Z"
+  },
+  {
+    "id": "2",
+    "name": "John Smith",
+    "rating": 4,
+    "comment": "Great UI but i would like to see more features in the future.",
+    "createdAt": "2026-03-10T12:30:00Z"
+  },
+  {
+    "id": "3",
+    "name": "Emily Johnson",
+    "rating": 5,
+    "comment": "Loved it, very clean and responsive design.",
+    "createdAt": "2026-03-15T09:15:00Z"
+  }
+]
